@@ -34,10 +34,10 @@ const toProperCase = (text) => {
 
 const updateWeatherLocationHeader = (message) => {
   const h1 = document.getElementById("currentForecast__location");
-  console.log(message);
+  
   if (message.indexOf("Lat:") !== -1 && message.indexOf("Long:") !== -1) {
     const msgArray = message.split(" ");
-    console.log(msgArray);
+    
     const mapArray = msgArray.map((msg) => {
       return msg.replace(":", ": ");
     });

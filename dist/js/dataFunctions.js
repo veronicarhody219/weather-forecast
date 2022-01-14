@@ -1,4 +1,4 @@
-const WEATHER_API_KEY = "faf9aa1b52fc33a0599c634c8ee6035a";
+// const WEATHER_API_KEY = "faf9aa1b52fc33a0599c634c8ee6035a";
 
 export const setLocationObject = (locationObj, coordsObj) => {
   const {lat, lon, name, unit} = coordsObj;
@@ -40,7 +40,7 @@ export const getCoordsFromApi = async (entryText, units) => {
   try {
     const dataStream = await fetch(encodeUrl);
     const jsonData = await dataStream.json();
-    console.log(jsonData);
+    
     return jsonData;
   } catch (err) {
     console.error(err.stack);
