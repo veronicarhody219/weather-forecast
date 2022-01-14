@@ -1,0 +1,21 @@
+.rain {
+  background-color: $background-color;
+  background-image: url("https://source.unsplash.com/1920x2000/?rain,landscape");
+}
+
+.snow {
+  background-color: $background-color;
+  background-image: url("https://source.unsplash.com/1920x2000/?snow,landscape");
+}
+.night {
+  background-color: $night-color;
+  background-image: url("https://source.unsplash.com/1920x2000/?night,landscape");
+}
+.fog {
+  background-color: $fog-color;
+  background-image: url("https://source.unsplash.com/1920x2000/?fog,landscape");
+}
+.cloud {
+  background-color: $background-color;
+  background-image: url("https://source.unsplash.com/1920x2000/?cloud,landscape");
+}
