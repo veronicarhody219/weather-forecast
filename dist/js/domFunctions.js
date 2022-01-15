@@ -34,10 +34,13 @@ const toProperCase = (text) => {
 
 const updateWeatherLocationHeader = (message) => {
   const h1 = document.getElementById("currentForecast__location");
-  
+  console.log(h1);
+  console.log(message);
+  h1.innerText = message;
+
   if (message.indexOf("Lat:") !== -1 && message.indexOf("Long:") !== -1) {
     const msgArray = message.split(" ");
-    
+
     const mapArray = msgArray.map((msg) => {
       return msg.replace(":", ": ");
     });
@@ -157,7 +160,7 @@ const createCurrentConditionsDivs = (weatherObj, unit) => {
     "temp",
     `${Math.round(Number(weatherObj.current.temp))}°`
   );
-  
+
   const properDesc = toProperCase(weatherObj.current.weather[0].description);
   const desc = createElem("div", "desc", properDesc);
   const feels = createElem(
